@@ -1,0 +1,18 @@
+{
+  "name": "TweetMap",
+  "version": "1.0.0-7",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": ">=2.1.0",
+    "socket.io": ">=1.0",
+    "twit": ">=1.1"
+  },
+  "private": true,
+  "subdomain": "TwittMap",
+  "scripts": {
+    "start": "node tweet.js"
+  },
+  "engines": {
+    "node": "8.16.x"
+  }
+}
