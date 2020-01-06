@@ -1,5 +1,5 @@
 <html>
-<title>twitterMap</title>
+<title>TweetOMap</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
 <script src="heatmap.min.js"></script>
@@ -10,6 +10,10 @@
 #map-canvas { height: 700px; }
 </style>
 <body>
+See source code:<a href=https://github.com/tomsoft1/TweetOMap>https://github.com/tomsoft1/TweetOMap</a>
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet">
+Tweet</a>
 <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
@@ -43,8 +47,8 @@ var hover_bubble=[];
 var showTweets=true;
 var socket=null;
 window.onload = function() {
-  var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/roqueleal08/cjyaey84d07zq1crze5r08yg1/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoicm9xdWVsZWFsMDgiLCJhIjoiY2ppZzl5NWo2MTVmMTNrcGU0enR0ZTU2MyJ9.4ZWYdzUlqvIQwwSIR50xZA', {
-	attribution: '&copy; <a href="© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
+  var baseLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
 	maxZoom: 19
 });
